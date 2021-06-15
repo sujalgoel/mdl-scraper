@@ -1,12 +1,12 @@
 const { mdl } = require('../index');
 
-mdl.SearchQuery('song-joong-ki')
-	.then((data) => {
-		console.log('SearchQuery Example:');
-		console.log(data);
-	});
+// mdl.SearchQuery('aloners')
+// 	.then((data) => {
+// 		console.log('SearchQuery Example:');
+// 		console.log(data);
+// 	});
 
-mdl.FetchQuery('61371-vincenz')
+mdl.FetchQuery('696359-people-living-alone')
 	.then((data) => {
 		console.log('FetchQuery Example:');
 		console.log(data);

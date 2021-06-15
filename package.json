@@ -1,6 +1,6 @@
 {
   "name": "mdl-scraper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A npm package for scraping data from mydramalist",
   "main": "index.js",
   "scripts": {

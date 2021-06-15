@@ -18,10 +18,26 @@ module.exports = {
 			if ($(e).attr('id')) {
 				r.mdl_id = $(e).attr('id');
 				r.title = title.text().trim();
-				r.ranking = $(e).find('div[class="ranking pull-right"]').find('span').text();
-				r.type = $(e).find('span[class="text-muted"]').text().split('-')[0].trim();
-				r.year = $(e).find('span[class="text-muted"]').text().split('-')[1].split(',')[0].trim();
-				r.series = $(e).find('span[class="text-muted"]').text().split('-')[1].split(',')[1].trim();
+				if ($(e).find('div[class="ranking pull-right"]').find('span').text()) {
+					r.ranking = $(e).find('div[class="ranking pull-right"]').find('span').text();
+				} else {
+					r.ranking = null;
+				}
+				try {
+					r.type = $(e).find('span[class="text-muted"]').text().split('-')[0].trim();
+				} catch (_) {
+					r.type = null;
+				}
+				try {
+					r.year = $(e).find('span[class="text-muted"]').text().split('-')[1].split(',')[0].trim();
+				} catch (_) {
+					r.year = null;
+				}
+				try {
+					r.series = $(e).find('span[class="text-muted"]').text().split('-')[1].split(',')[1].trim();
+				} catch (_) {
+					r.series = null;
+				}
 				return dramas.push(r);
 			}
 			r.name = title.text().trim();
