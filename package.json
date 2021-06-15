@@ -1,0 +1,29 @@
+{
+  "name": "mdl-scraper",
+  "version": "1.0.1",
+  "description": "A npm package for scraping data from mydramalist",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "mdl",
+    "mydramalist",
+    "k-drama",
+    "kdrama"
+  ],
+  "homepage": "https://github.com/sujalgoel/mdl-scraper",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sujalgoel/mdl-scraper/issues"
+  },
+  "author": "Sujal Goel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sujalgoel/mdl-scraper.git"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
