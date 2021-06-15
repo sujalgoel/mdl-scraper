@@ -159,5 +159,5 @@ mdl.FetchQuery("61371-vincenzo").then((data) => {
 - **Github:** [@Sujal Goel](https://github.com/sujalgoel)
 - **Website:** [@Sujal Goel](https://sujalgoel.ml)
 
-## Support ❓ 
-<img src="https://invidget.switchblade.xyz/2SUybzb">
+## Support ❓
+<a href="https://discord.gg/2SUybzb"><img src="https://invidget.switchblade.xyz/2SUybzb"></a>
