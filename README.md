@@ -147,6 +147,36 @@ mdl.FetchQuery("61371-vincenzo").then((data) => {
 
 </details>
 
+<details>
+<summary>FetchPerson example</summary>
+
+```js
+const { mdl } = require("mdl-scraper");
+
+mdl.FetchPerson("5647-bong-joon-ho").then((data) => {
+  console.log(data);
+});
+```
+
+### Example Response
+
+```json
+{
+   "name":"Bong Joon Ho",
+   "about":"`Bong Joon Ho  Name: Bong Joon Ho  Native name: 봉준호    Nationality: South Korean Gender: Male  Born: September 14, 1969   Age: 51 Bong Joon-ho is a South Korean film director and screenwriter. Bong in general is known as being a director who takes a great interest in film genres, while simultaneously trying to move beyond genre's usual boundaries. Also known for the pure craft and finished quality of his works, Korean film industry insiders have nicknamed him \"Bong Tae-il,\" which, pronounced in Korean, sounds similar to the word \"detail\". Though he displays a fascination for strong subject matter, at the same time, his films are filled with (often black) humor and sudden mood shifts, making for an emotional roller coaster ride. The fact that he is able to combine all these contrasting elements into such a smooth whole is Bong's particular strength as a filmmaker. In 2019, director, Bong Joon-ho won the Cannes Palm d'Or (Grand Prize) for his movie Parasite. This is the first Korean film to ever win the award.`",
+   "profile":"https://i.mydramalist.com/dWLK5_5c.jpg",
+   "first_name":"Joon Ho",
+   "family_name":"Bong",
+   "native_name":"봉준호",
+   "nationality":"South Korean",
+   "gender":"Male",
+   "born":"September 14, 1969",
+   "age":"51"
+}
+```
+
+</details>
+
 ## Contributing 🤝
 
 - **Contributions, issues and feature requests are welcome!**

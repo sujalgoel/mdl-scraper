@@ -87,4 +87,23 @@ module.exports = {
 			throw new Error(e);
 		}
 	},
+	async FetchPerson(query) {
+		try {
+			const $ = await fetchhtml(`${BASE_URL}/people/${query}`);
+			const profile = {};
+			const container = $('div[class="app-body"]');
+			profile.name = container.find('h1[class="film-title m-b-0"]').text().trim();
+			profile.about = container.find('div[class="col-sm-8 col-lg-12 col-md-12"]').text().trim().replace(/\n/g, '');
+			profile.profile = fetchPoster(container);
+			const details = {};
+			container.find('ul[class="list m-b-0"]').find('li').each((i, e) => {
+				const title = $(e).find('b').text().trim();
+				details[title.replace(':', '').replace(/\s/g, '_').toLowerCase()] = $(e).text().replace(title + ' ', '').trim();
+			});
+			const data = Object.assign({}, profile, details);
+			return data;
+		} catch (e) {
+			throw new Error(e);
+		}
+	},
 };
